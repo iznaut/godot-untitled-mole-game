@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/room_test.tmx-ce94c0ba060ea371c1dc3bbb84d9bc0b.scn"
+
+[deps]
+
+source_file="res://tilemaps/room_test.tmx"
+dest_files=[ "res://.import/room_test.tmx-ce94c0ba060ea371c1dc3bbb84d9bc0b.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=0
+collision_layer=0
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script="res://scripts/TiledImporter.gd"

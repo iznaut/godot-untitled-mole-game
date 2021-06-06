@@ -1,0 +1,84 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "GridObject",
+"language": "GDScript",
+"path": "res://scripts/GridObject.gd"
+} ]
+_global_script_class_icons={
+"GridObject": ""
+}
+
+[application]
+
+config/name="mole-mania"
+run/main_scene="res://scenes/Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
+[display]
+
+window/size/width=160
+window/size/height=144
+window/size/always_on_top=true
+window/size/test_width=640
+window/size/test_height=576
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/vnen.tiled_importer/plugin.cfg" )
+
+[importer_defaults]
+
+vnen.tiled_importer={
+"add_background": true,
+"collision_layer": 0,
+"custom_properties": true,
+"embed_internal_images": false,
+"image_flags": 0,
+"post_import_script": "res://scripts/TiledImporter.gd",
+"save_tiled_properties": false,
+"tile_metadata": false,
+"uv_clip": true
+}
+vnen.tiled_tileset_importer={
+"apply_offset": false,
+"custom_properties": true,
+"embed_internal_images": true,
+"image_flags": 0,
+"post_import_script": "",
+"save_tiled_properties": false,
+"tile_metadata": false
+}
+
+[input]
+
+dig={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_render/layer_2="Top Level"
+2d_render/layer_3="Bottom Level"
+
+[tiled_importer]
+
+enable_json_format=true
